@@ -30,6 +30,7 @@ Eclipse will export the plugin JAR file into a `plugins/` sub-folder within your
 
 ## Installation
 
+1.  Download the navicon.gemini.eclipse.companion_1.0.0.qualifier.jar from the release page.
 1.  Locate the installation directory of your target Eclipse or STS IDE.
 2.  Find the `dropins/` folder inside the installation directory.
 3.  Copy the exported JAR file (e.g., `navicon.gemini.eclipse.companion_1.0.0.qualifier.jar`) into the `dropins/` folder.
@@ -53,6 +54,8 @@ To allow the Gemini CLI to automatically discover and connect to the running Ecl
     ```bash
     # Load Gemini Eclipse companion environment variables if available
     if [ -f /tmp/gemini/eclipse_env.sh ]; then
+      export TERM_PROGRAM=vscode
+      export GEMINI_API_KEY="..."    
       source /tmp/gemini/eclipse_env.sh
     fi
     ```
