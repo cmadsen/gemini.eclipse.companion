@@ -1,3 +1,4 @@
+
 package navicon.gemini.eclipse.companion;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
