@@ -1,0 +1,14 @@
+#Eclipse
+.metadata
+.recommenders
+.settings/
+.classpath
+.project
+.factorypath
+# Build output
+/bin/
+/target/
+ 
+# Temp files
+*.tmp
+*~
