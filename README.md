@@ -1,4 +1,4 @@
-# Gemini Eclipse Companion Plugin
+# Gemini CLI Eclipse Companion Plugin
 
 This Eclipse plugin acts as a companion server for the [Gemini CLI](https://geminicli.com/), enabling IDE-specific features like native diffing and context awareness directly within Eclipse and compatible IDEs (like Spring Tool Suite).
 
