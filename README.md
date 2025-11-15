@@ -12,12 +12,12 @@ It implements the [Gemini CLI Companion Plugin Interface Specification](https://
 
 ## Prerequisites
 
-*   An Eclipse-based IDE, such as **Eclipse IDE for RCP and RAP Developers** or **Spring Tool Suite (STS)**.
+*   An Eclipse-based IDE, such as standard **Eclipse IDE** or **Spring Tool Suite (STS)**.
 *   A **Java 17 JDK/JRE** configured to run the IDE.
 
 ## Building the Plugin
 
-To build the plugin, you need to export it as a deployable JAR file from your Eclipse workspace.
+To build the plugin open the project in **Eclipse IDE for RCP and RAP Developers**, then you need to export it as a deployable JAR file from your Eclipse workspace.
 
 1.  In the "Package Explorer", right-click on the `navicon.gemini.eclipse.companion` project.
 2.  Select **Export...**.
@@ -61,6 +61,14 @@ To allow the Gemini CLI to automatically discover and connect to the running Ecl
     ```
 
 3.  **Apply the Changes:** Save the file and open a new terminal. Any new terminal session will now automatically have the correct environment variables set whenever the Eclipse plugin is running.
+
+4.  **Start Gemini CLI:** Before starting the Gemini CLI, ensure you open a terminal within Eclipse 
+    (e.g., by navigating to `Window -> Show View -> Terminal` and then clicking the 'Open a new terminal' icon 
+    in the newly opened tab) and `cd` into a directory that is part of your active Eclipse workspace. 
+    This ensures that the `GEMINI_CLI_IDE_WORKSPACE_PATH` environment variable is correctly set for the CLI. 
+    You can verify the `GEMINI_CLI_IDE_WORKSPACE_PATH` by inspecting the contents of `/tmp/gemini/eclipse_env.sh` 
+    (e.g., `cat /tmp/gemini/eclipse_env.sh`). For more details on how these environment variables are set, 
+    refer to the `updateEnvironmentFile` method in `GeminiHttpServer.java`.
 
 ## Usage
 
