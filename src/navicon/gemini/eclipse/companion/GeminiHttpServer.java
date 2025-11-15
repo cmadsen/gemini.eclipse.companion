@@ -69,6 +69,7 @@ public class GeminiHttpServer implements IPartListener2, ISelectionListener {
 			server.setExecutor(Executors.newCachedThreadPool());
 			server.start();
 			System.out.println("Gemini Companion Server started on port: " + port);
+			Activator.logInfo("Gemini Companion Server started on port: " + port);
 			createDiscoveryFile(port);
 			updateEnvironmentFile(port);
 			startListening();
